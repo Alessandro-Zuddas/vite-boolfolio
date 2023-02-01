@@ -2,15 +2,35 @@
 
 export default {
   name: "ProjectCard",
+  props: {
+    data: Object,
+  }
 };
 
 </script>
 
 <template>
 
-  <div>
-    <h1>ProjectCard</h1>
-  </div>
+    <div class="col-2">
+        <div class="card" style="width: 18rem;">
+            <img       
+                v-if="project_image"
+                :src="data.project_image"
+                class="card-img-top"
+                :alt="data.name">
+
+            <img v-else
+                src="https://via.placeholder.com/150"
+                :alt="data.name">
+
+            <div class="card-body">
+                <h5 class="card-title">{{ data.name }}</h5>
+                <p class="card-text">{{ data.description }}</p>
+                <p>{{ data.slug }}</p>
+                <small>{{ data.date }}</small>
+            </div>
+        </div>
+    </div>
 
 </template>
 

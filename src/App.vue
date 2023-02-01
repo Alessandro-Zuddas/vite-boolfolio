@@ -9,14 +9,14 @@ export default {
   },
   data() {
     return {
-      projects: {},
+      projects: [],
     }
   },
   created(){
     axios.get(`http://127.0.0.1:8000/api/projects`)
       .then(res => {
-        this.projects = res.data;
-        console.log(this.projects.results);
+        this.projects = res.data.results;
+        console.log(this.projects);
       });
   }
 
@@ -26,10 +26,15 @@ export default {
 
 <template>
 
-  <div>
+  <div class="container-fluid my-2">
+    <div class="row justify-content-between gy-4">
 
-    <ProjectCard />
+      <ProjectCard 
+        v-for="project in projects"
+        :data="project"
+      />
 
+    </div>
   </div>
 
 </template>
