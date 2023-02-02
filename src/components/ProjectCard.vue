@@ -31,7 +31,7 @@ export default {
                 <p class="card-text">{{ data.description }}</p>
                 <p>{{ data.slug }}</p>
                 <small>{{ data.date }}</small>
-                <router-link class="btn btn-primary d-block my-2" :to="{  }">
+                <router-link class="btn btn-primary d-block my-2" :to="{ name: 'single-project', params: { slug: data.slug } }">
                     Mostra il progetto
                 </router-link>
             </div>
