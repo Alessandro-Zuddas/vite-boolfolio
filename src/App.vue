@@ -1,25 +1,15 @@
 <script>
 
-import axios from "axios";
-import ProjectCard from "./components/ProjectCard.vue";
+import AppHeader from "./components/AppHeader.vue";
+import AppMain from "./components/AppMain.vue";
+import AppFooter from "./components/AppFooter.vue";
 
 export default {
   components: {
-    ProjectCard,
+    AppHeader,
+    AppMain,
+    AppFooter,
   },
-  data() {
-    return {
-      projects: [],
-    }
-  },
-  created(){
-    axios.get(`http://127.0.0.1:8000/api/projects`)
-      .then(res => {
-        this.projects = res.data.results;
-        console.log(this.projects);
-      });
-  }
-
 };
 
 </script>
@@ -29,10 +19,9 @@ export default {
   <div class="container-fluid my-2">
     <div class="row justify-content-between gy-4">
 
-      <ProjectCard 
-        v-for="project in projects"
-        :data="project"
-      />
+      <AppHeader/>
+      <AppMain/>
+      <AppFooter/>
 
     </div>
   </div>
