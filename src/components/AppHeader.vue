@@ -15,10 +15,15 @@ export default {
             </div>
             <div class="col-8">
                 <nav class="row justify-content-end">
-                    <a class="col-1" href="">Prova</a>
-                    <a class="col-1" href="">Prova</a>
-                    <a class="col-1" href="">Prova</a>
-                    <a class="col-1" href="">Prova</a>
+                    <router-link class="col-1" :to="{ name: 'projects' }">
+                        Progetti
+                    </router-link>
+                    <router-link class="col-1" :to="{ name: 'about' }">
+                        About Us
+                    </router-link>
+                    <router-link class="col-1" :to="{ name: 'staff' }">
+                        Chi Siamo
+                    </router-link>
                 </nav>
             </div>
         </div>

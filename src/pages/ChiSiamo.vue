@@ -1,16 +1,14 @@
 <script>
 
-import axios from "axios";
-
 export default {
-  name: "AppMain",
+  name: "ChiSiamo",
 
   components: {
 
   },
   data() {
     return {
-
+ 
     }
   },
   created(){
@@ -22,11 +20,9 @@ export default {
 
 <template>
 
-  <main>
-
-    <router-view></router-view>
-    
-  </main>
+    <div>
+        <h1>Chi Siamo</h1>
+    </div>
 
 </template>
 
