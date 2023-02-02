@@ -1,10 +1,13 @@
 <script>
+import { RouterLink } from 'vue-router';
+
 
 export default {
-  name: "ProjectCard",
-  props: {
-    data: Object,
-  }
+    name: "ProjectCard",
+    props: {
+        data: Object,
+    },
+    components: { RouterLink }
 };
 
 </script>
@@ -23,11 +26,14 @@ export default {
                 src="https://via.placeholder.com/150"
                 :alt="data.name">
 
-            <div class="card-body">
+            <div class="card-body text-center">
                 <h5 class="card-title">{{ data.name }}</h5>
                 <p class="card-text">{{ data.description }}</p>
                 <p>{{ data.slug }}</p>
                 <small>{{ data.date }}</small>
+                <router-link class="btn btn-primary d-block my-2" :to="{  }">
+                    Mostra il progetto
+                </router-link>
             </div>
         </div>
     </div>
