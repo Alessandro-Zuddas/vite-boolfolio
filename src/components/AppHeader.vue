@@ -16,13 +16,16 @@ export default {
             <div class="col-8">
                 <nav class="row justify-content-end">
                     <router-link class="col-1 ms-nav-links" :to="{ name: 'projects' }">
-                        Progetti
+                        <small>Progetti</small>
                     </router-link>
                     <router-link class="col-1 ms-nav-links" :to="{ name: 'about' }">
-                        About Us
+                       <small>About Us</small>
                     </router-link>
                     <router-link class="col-1 ms-nav-links" :to="{ name: 'staff' }">
-                        Chi Siamo
+                        <small>Chi siamo</small>
+                    </router-link>
+                    <router-link class="col-1 ms-nav-links" :to="{ name: 'contact-us' }">
+                        <small>Contattaci</small>
                     </router-link>
                 </nav>
             </div>

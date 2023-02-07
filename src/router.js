@@ -6,6 +6,8 @@ import AboutUs from './pages/AboutUs.vue';
 
 import ChiSiamo from './pages/ChiSiamo.vue';
 
+import ContactUs from "./pages/ContactUs.vue";
+
 import SingleProject from './pages/SingleProject.vue';
 
 const router = createRouter({
@@ -25,6 +27,11 @@ const router = createRouter({
         path: '/chi-siamo',
         name: 'staff',
         component: ChiSiamo
+    },
+    {
+        path: '/contattaci',
+        name: 'contact-us',
+        component: ContactUs
     },
     {
         path: '/blog/:slug',
