@@ -1,4 +1,6 @@
 <script>
+import axios from 'axios';
+
 
 export default {
   name: "ContactUs",
@@ -20,7 +22,14 @@ export default {
   methods:{
 
     sendEmail(){
-        
+        axios.post("http://127.0.0.1:8000/api/contact-form", {
+            name: this.formData.name,
+            email: this.formData.email,
+            message: this.formData.message,
+        })
+        .then((res) => {
+            console.log(res.data);
+        });
     },
 
   },    
