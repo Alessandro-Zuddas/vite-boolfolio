@@ -22,13 +22,13 @@ export default {
 
 <template>
 
+  
   <div class="container-fluid my-2">
-
     <AppHeader/>
     <AppMain/>
     <AppFooter/>
-
   </div>
+
 
 </template>
 

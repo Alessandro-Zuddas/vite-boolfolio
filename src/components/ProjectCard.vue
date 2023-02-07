@@ -14,15 +14,16 @@ export default {
 
 <template>
 
-    <div class="col-2">
+    <div class="col d-flex flex-column align-items-center">
         <div class="card" style="width: 18rem;">
-            <img       
+            <img      
                 v-if="project_image"
                 :src="data.project_image"
                 class="card-img-top"
                 :alt="data.name">
 
             <img v-else
+                class="card-img-top"
                 src="https://via.placeholder.com/150"
                 :alt="data.name">
 
